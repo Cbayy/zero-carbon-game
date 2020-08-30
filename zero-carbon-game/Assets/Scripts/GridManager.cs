@@ -21,11 +21,15 @@ public class GridManager : MonoBehaviour
     }
 
     void generateGrid(){
-        //GameObject referenceTile = (GameObject)Instantiate(Resources.load("tilename)); add tile sprite
+        GameObject referenceTile = (GameObject)Instantiate(Resources.Load("dirt"));
         for(int row = 0; row < rows; row++){
             for(int column = 0; column < columns; column++){
-
+                GameObject tile = (GameObject)Instantiate(referenceTile, transform);
+                float positionX = column * tileSize;
+                float positionY = row * -tileSize;
+                tile.transform.position = new Vector2(positionX, positionY);
             }
         }
+        Destroy(referenceTile);
     }
 }
