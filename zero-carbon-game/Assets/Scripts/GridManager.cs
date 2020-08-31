@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
+    [SerializeField]
     int columns = 20;
+    [SerializeField]
     int rows = 20;
+    [SerializeField]
     float tileSize = 1;
     
     // Start is called before the first frame update
@@ -28,8 +31,14 @@ public class GridManager : MonoBehaviour
                 float positionX = column * tileSize;
                 float positionY = row * -tileSize;
                 tile.transform.position = new Vector2(positionX, positionY);
+
             }
         }
         Destroy(referenceTile);
+
+        float gridWidth = columns * tileSize;
+        float gridHeight = rows * tileSize;
+
+        transform.position = new Vector2(-gridWidth/2 + tileSize/2, gridHeight/2 - tileSize/2);
     }
 }

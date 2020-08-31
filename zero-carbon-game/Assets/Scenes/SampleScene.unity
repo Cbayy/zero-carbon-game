@@ -233,6 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bea827054dc938409ee32f9d6d6177e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  columns: 20
+  rows: 20
+  tileSize: 1
 --- !u!4 &1838659184
 Transform:
   m_ObjectHideFlags: 0
