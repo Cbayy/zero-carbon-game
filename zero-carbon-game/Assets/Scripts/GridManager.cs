@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
+    /*
     [SerializeField]
     int columns = 20;
     [SerializeField]
@@ -41,4 +42,5 @@ public class GridManager : MonoBehaviour
 
         transform.position = new Vector2(-gridWidth/2 + tileSize/2, gridHeight/2 - tileSize/2);
     }
+    */
 }
