@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Elevation
+    uniqueID: 1455896079
+    locked: 0
+  - name: Player
+    uniqueID: 2859198217
+    locked: 0
