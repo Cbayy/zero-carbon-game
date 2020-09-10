@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 232780355}
   - component: {fileID: 232780359}
   - component: {fileID: 232780358}
+  - component: {fileID: 232780360}
   m_Layer: 0
   m_Name: isometric_0002
   m_TagString: Untagged
@@ -241,7 +242,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 8, y: 8}
   m_EdgeRadius: 0
 --- !u!50 &232780359
 Rigidbody2D:
@@ -262,8 +263,21 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &232780360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232780354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549a23bb59219c949904343431e1abe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1580531880}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
