@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.TileMaps;
+using UnityEngine.Tilemaps;
 
 public class TileClicked : MonoBehaviour
 {
 
-    //public TileMap tilemap;
+    
+    public Tilemap tilemap;
     //public TileBase swappedTile;
     
     public Grid grid;
@@ -30,6 +31,8 @@ public class TileClicked : MonoBehaviour
             Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
             Vector3Int position = grid.WorldToCell(worldPoint);
             Debug.Log(position);
+            
+            tilemap.SetTile(position, null);
         }
         
     }
