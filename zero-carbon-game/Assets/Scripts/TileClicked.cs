@@ -12,6 +12,8 @@ public class TileClicked : MonoBehaviour
     
     public Grid grid;
 
+    public TileBase grassSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,8 @@ public class TileClicked : MonoBehaviour
             Vector3Int position = grid.WorldToCell(worldPoint);
             Debug.Log(position);
             
-            tilemap.SetTile(position, null);
+            //tilemap.SetTile(position, null);
+            tilemap.SetTile(position, grassSprite);
         }
         
     }
