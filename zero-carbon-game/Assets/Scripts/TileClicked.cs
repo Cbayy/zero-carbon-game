@@ -33,9 +33,19 @@ public class TileClicked : MonoBehaviour
             Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
             Vector3Int position = grid.WorldToCell(worldPoint);
             Debug.Log(position);
-            
-            //tilemap.SetTile(position, null);
+
             tilemap.SetTile(position, grassSprite);
+            
+            //Vector3Int temp = new Vector3Int(position.x -1, position.y, position.z);
+            //TileBase tempT = tilemap.GetTile(temp);
+            //tilemap.SetTile(temp, tempT);
+
+            //Debug.Log(temp);
+
+            //tilemap.SetTile(position, null);
+            
+
+
         }
         
     }

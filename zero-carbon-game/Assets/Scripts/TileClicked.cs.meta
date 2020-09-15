@@ -3,7 +3,10 @@ guid: 549a23bb59219c949904343431e1abe0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tilemap: {instanceID: 0}
+  - grid: {instanceID: 0}
+  - grassSprite: {fileID: 11400000, guid: 1cdc22ad883b40a47a91bbe20e5723cd, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
