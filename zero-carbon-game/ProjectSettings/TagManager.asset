@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - items
+  - Tilemap
+  - Grid
   layers:
   - Default
   - TransparentFX
