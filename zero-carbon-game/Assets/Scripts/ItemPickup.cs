@@ -19,6 +19,7 @@ public class ItemPickup : MonoBehaviour
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
+                    print("Picked up: " + this.name);
                     break;
                 }
             }
