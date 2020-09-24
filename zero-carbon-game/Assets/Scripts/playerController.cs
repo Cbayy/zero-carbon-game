@@ -33,4 +33,11 @@ public class playerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other){
+        print("yeet");
+        if(other.gameObject.CompareTag("items")){
+            Destroy(other.gameObject);
+        }
+    }
+
 }
