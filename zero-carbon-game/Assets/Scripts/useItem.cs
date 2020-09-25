@@ -14,7 +14,8 @@ public class useItem : MonoBehaviour
 
     private bool placing = false;
 
-    int i = 1;
+    public TileBase grassSprite;
+
 
     private void Start(){
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -37,7 +38,14 @@ public class useItem : MonoBehaviour
                 Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
                 Vector3Int position = grid.WorldToCell(worldPoint);
                 Debug.Log(position);
+                print("YEET" + this.name);
                 placing = false;
+                if(this.name == "ecseed"){
+                    print("YESS");
+                    tilemap.SetTile(position, grassSprite);
+                }else{
+                    print("NOO");
+                }
                 //this.GameObject.destroy;
             }
     }
