@@ -1029,27 +1029,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1311660637 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5558374395244910969, guid: 33a46b5865a161d499004f17c9c88728,
-    type: 3}
-  m_PrefabInstance: {fileID: 5558374396149449508}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1311660643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311660637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1128760b18f204044a5c552e32fabd5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
-  grid: {fileID: 0}
-  grassSprite: {fileID: 11400000, guid: c9c0faf356b5f2549bd226e9a4195399, type: 2}
 --- !u!1 &1580531879
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,6 +6686,7 @@ GameObject:
   - component: {fileID: 1939535134}
   - component: {fileID: 1939535136}
   - component: {fileID: 1939535135}
+  - component: {fileID: 1939535137}
   m_Layer: 5
   m_Name: Slot (1)
   m_TagString: Untagged
@@ -6770,6 +6750,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939535133}
   m_CullTransparentMesh: 0
+--- !u!114 &1939535137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939535133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8dfd6385b80764887c7f6eee647af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2000966290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7219,7 +7211,6 @@ GameObject:
   - component: {fileID: 2091226128}
   - component: {fileID: 2091226129}
   - component: {fileID: 2091226126}
-  - component: {fileID: 2091226130}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -7369,21 +7360,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2091226130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091226123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1128760b18f204044a5c552e32fabd5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
-  grid: {fileID: 0}
-  grassSprite: {fileID: 0}
 --- !u!1001 &5558374396149449508
 PrefabInstance:
   m_ObjectHideFlags: 0

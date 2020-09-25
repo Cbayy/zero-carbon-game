@@ -28,8 +28,10 @@ public class useItem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)){
             print("aa" + this.name);
+                    print("THIS: " + inventory.slots[0].name);
                 placing = true;
         }
+
     }
 
     void FixedUpdate(){
