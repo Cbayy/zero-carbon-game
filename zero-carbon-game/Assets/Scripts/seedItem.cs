@@ -11,7 +11,7 @@ public class seedItem : MonoBehaviour
 
     public Grid grid;
 
-    private bool placing = false;
+    //private bool placing = false;
 
     public TileBase grassSprite;
 
@@ -46,7 +46,7 @@ public class seedItem : MonoBehaviour
                         Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
                         Vector3Int position = grid.WorldToCell(worldPoint);
 
-                        placing = false;
+                        //placing = false;
                         tilemap.SetTile(position, grassSprite);
 
 

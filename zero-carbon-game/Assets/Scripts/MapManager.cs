@@ -5,8 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField]
-    private Tilemap map;
+
+    public Tilemap map;
 
     private void Update(){
         if(Input.GetMouseButton(0)){
