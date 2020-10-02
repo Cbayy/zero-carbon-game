@@ -10,7 +10,9 @@ public class waterTile : MonoBehaviour
     private Inventory inventory;
     public Tilemap tilemap;
     public Grid grid;
-    public TileBase grassSprite;
+
+    public TileBase waterSand;
+    public TileBase waterEcSeed;
 
     void Start()
     {
@@ -35,8 +37,8 @@ public class waterTile : MonoBehaviour
                         Vector3Int gridPosition = tilemap.WorldToCell(mousePosition);
                         //tilemap.SetTile(position, grassSprite);
                         TileBase clickedTile = tilemap.GetTile(gridPosition);
-                        TileBase wateredTile = getTile(clickedTile);
-                        tilemap.SetTile(gridPosition, grassSprite);
+                        //TileBase wateredTile = getTile(clickedTile);
+                        getTile(clickedTile, gridPosition);
                         wait = false;
                         
             }
@@ -44,11 +46,22 @@ public class waterTile : MonoBehaviour
         }
     }    
 
-    public TileBase getTile(TileBase current){
+    public void getTile(TileBase current, Vector3Int gridPosition){
         
-        string tileName = current.ToString();
+        string tileName = current.name;
         print("TTT: " + tileName);
-        return null;
+        
+        switch (tileName)
+        {
+            case "sand01":
+                tilemap.SetTile(gridPosition, waterSand);
+                break;
+            case "plantedEcSeed":
+                tilemap.SetTile(gridPosition, waterEcSeed);
+                break;
+            default:
+            break;
+        }
     }
 
 }
