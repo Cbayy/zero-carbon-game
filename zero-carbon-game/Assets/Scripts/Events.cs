@@ -13,6 +13,8 @@ public class Events : MonoBehaviour
     BoundsInt bounds;
     TileBase[] allTiles;
 
+    public TileBase blueFlower;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,15 +32,15 @@ public class Events : MonoBehaviour
     }
 
     public void grow(){
-        for (int x = 0; x < bounds.size.x; x++) {
-            for (int y = 0; y < bounds.size.y; y++) {
-                TileBase tile = allTiles[x + y * bounds.size.x];
+        for (int x = -50; x < 100; x++) {
+            for (int y = -50; y < 100; y++) {
+                Vector3Int gridPosition = new Vector3Int(x,y,0);
+                TileBase tile = tilemap.GetTile(gridPosition);
                 if (tile != null) {
-                    Vector3Int gridPosition = new Vector3Int(x,y,0);
                     switch (tile.name)
                     {
-                        case "plantedEcSeed":
-                        tilemap.SetTile(gridPosition, null);
+                        case "wateredPlantedEcSeed":
+                            tilemap.SetTile(gridPosition, blueFlower);
                         break;
                         default:
                         break;
