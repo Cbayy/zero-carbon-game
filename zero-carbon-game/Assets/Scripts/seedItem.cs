@@ -13,7 +13,7 @@ public class seedItem : MonoBehaviour
 
     //private bool placing = false;
 
-    public TileBase grassSprite;
+    public TileBase plantedEcSeed;
 
     public seedItem button;
 
@@ -47,7 +47,7 @@ public class seedItem : MonoBehaviour
                         Vector3Int position = grid.WorldToCell(worldPoint);
 
                         //placing = false;
-                        tilemap.SetTile(position, grassSprite);
+                        tilemap.SetTile(position, plantedEcSeed);
 
 
                         wait = false;
