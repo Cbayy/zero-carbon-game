@@ -8,6 +8,7 @@ TagManager:
   - Tilemap
   - Grid
   - Slot
+  - EventSystem
   layers:
   - Default
   - TransparentFX
