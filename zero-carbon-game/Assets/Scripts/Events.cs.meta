@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c2b2cd6ece2791f4fb6ae54e4e83860c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - blueFlower: {fileID: 11400000, guid: 276b81810a17a794bb0d8c4f03c078d8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
