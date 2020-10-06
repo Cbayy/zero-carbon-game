@@ -15,7 +15,7 @@ public class MapManager : MonoBehaviour
 
             TileBase clickedTile = map.GetTile(gridPosition);
 
-            print("At pos: " + gridPosition +  " there is a " + clickedTile);
+            //print("At pos: " + gridPosition +  " there is a " + clickedTile);
         }
     }
 }
