@@ -9,6 +9,7 @@ TagManager:
   - Grid
   - Slot
   - EventSystem
+  - Score
   layers:
   - Default
   - TransparentFX
