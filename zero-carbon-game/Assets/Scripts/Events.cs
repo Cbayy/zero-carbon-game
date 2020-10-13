@@ -15,7 +15,6 @@ public class Events : MonoBehaviour
 
     public TileBase blueFlower;
 
-    GameObject CarbonScore;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +24,6 @@ public class Events : MonoBehaviour
 
         bounds = tilemap.cellBounds;
         allTiles = tilemap.GetTilesBlock(bounds);
-        
-        CarbonScore = GameObject.FindGameObjectWithTag("Score");
     }
 
     // Update is called once per frame
@@ -45,7 +42,6 @@ public class Events : MonoBehaviour
                     {
                         case "wateredPlantedEcSeed":
                             tilemap.SetTile(gridPosition, blueFlower);
-                            CarbonScore.GetComponent<Score>().score++;
                         break;
                         default:
                         break;

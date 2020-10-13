@@ -11,13 +11,17 @@ public class HarvestTile : MonoBehaviour
     public Tilemap tilemap;
     public Grid grid;
 
+    
+    GameObject CarbonScore;
+
     public TileBase plantedEcSeed;
     // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
-        grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();      
+        grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();  
+        CarbonScore = GameObject.FindGameObjectWithTag("Score");    
     }
 
     //Can prob combine below code with that in waterTile
@@ -50,9 +54,11 @@ public class HarvestTile : MonoBehaviour
         {
             case "blueFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
+                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 2;
                 break;
             case "redFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
+                CarbonScore.GetComponent<Score>().score++;
                 break;
             default:
             break;
