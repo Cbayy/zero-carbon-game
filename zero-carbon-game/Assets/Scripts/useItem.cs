@@ -43,7 +43,6 @@ public class useItem : MonoBehaviour
                 print("YEET" + this.name);
                 placing = false;
                 if(this.name == "ecseed"){
-                    print("YESS");
                     tilemap.SetTile(position, grassSprite);
                 }else{
                     print("NOO");
