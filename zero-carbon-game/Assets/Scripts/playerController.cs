@@ -11,6 +11,12 @@ public class playerController : MonoBehaviour
 
     public Rigidbody2D rb;
     private Vector2 moveDirection;
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
 
     // Update is called once per frame
@@ -41,6 +47,25 @@ public class playerController : MonoBehaviour
 
     void Move(){
         rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+        
+        Vector3 characterScale = transform.localScale;
+        if(Input.GetAxis("Horizontal") < 0){
+            characterScale.x = -10;
+            animator.SetBool("left", true);
+            animator.SetBool("right", false);
+            animator.SetBool("idle", false);
+        }
+        if(Input.GetAxis("Horizontal") > 0){
+            characterScale.x = 10;
+            animator.SetBool("right", true);
+            animator.SetBool("left", false);
+            animator.SetBool("idle", false);
+        }
+        if(Input.GetAxis("Horizontal") == 0){
+            animator.SetBool("right", false);
+            animator.SetBool("left", false);
+            animator.SetBool("idle", true);
+        }
     }
 
     /*

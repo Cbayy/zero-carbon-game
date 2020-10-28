@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5375a39d515c94e869345a5801cabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 100
   scoreTxt: {fileID: 1319209960}
 --- !u!114 &1319209960
 MonoBehaviour:
@@ -7287,7 +7287,7 @@ SpriteRenderer:
   m_SortingLayerID: -1435769079
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa89dce155f63994b83cd0020efb0d7d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aeda606757c5ab246a178fd370aef9e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
