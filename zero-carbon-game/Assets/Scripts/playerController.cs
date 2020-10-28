@@ -54,17 +54,37 @@ public class playerController : MonoBehaviour
             animator.SetBool("left", true);
             animator.SetBool("right", false);
             animator.SetBool("idle", false);
+            animator.SetBool("up", false);
+            animator.SetBool("down", false);
         }
         if(Input.GetAxis("Horizontal") > 0){
             characterScale.x = 10;
             animator.SetBool("right", true);
             animator.SetBool("left", false);
             animator.SetBool("idle", false);
+            animator.SetBool("up", false);
+            animator.SetBool("down", false);
         }
         if(Input.GetAxis("Horizontal") == 0){
             animator.SetBool("right", false);
             animator.SetBool("left", false);
             animator.SetBool("idle", true);
+            animator.SetBool("up", false);
+            animator.SetBool("down", false);
+        }
+        if(Input.GetAxis("Vertical") > 0){
+            animator.SetBool("right", false);
+            animator.SetBool("left", false);
+            animator.SetBool("idle", false);
+            animator.SetBool("up", true);
+            animator.SetBool("down", false);
+        }
+        if(Input.GetAxis("Vertical") < 0){
+            animator.SetBool("right", false);
+            animator.SetBool("left", false);
+            animator.SetBool("idle", false);
+            animator.SetBool("up", false);
+            animator.SetBool("down", true);
         }
     }
 
