@@ -47,16 +47,33 @@ public class seedItem : MonoBehaviour
                         Vector3Int position = grid.WorldToCell(worldPoint);
 
                         //placing = false;
-                        tilemap.SetTile(position, plantedEcSeed);
-
+                        //tilemap.SetTile(position, plantedEcSeed);
+                        TileBase clickedTile = tilemap.GetTile(position);
+                        getTile(clickedTile, position);
 
                         wait = false;
-                        Destroy(gameObject);
+                        
                         
             }
             yield return null;
         }
     }        
+
+    public void getTile(TileBase current, Vector3Int gridPosition){
+        
+        string tileName = current.name;
+        print("TTT: " + tileName);
+        
+        switch (tileName)
+        {
+            case "sand01":
+                tilemap.SetTile(gridPosition, plantedEcSeed);
+                Destroy(gameObject);
+                break;
+            default:
+            break;
+        }
+    }
 
 /*
 

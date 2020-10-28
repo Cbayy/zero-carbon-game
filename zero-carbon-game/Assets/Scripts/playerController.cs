@@ -50,7 +50,6 @@ public class playerController : MonoBehaviour
         
         Vector3 characterScale = transform.localScale;
         if(Input.GetAxis("Horizontal") < 0){
-            characterScale.x = -10;
             animator.SetBool("left", true);
             animator.SetBool("right", false);
             animator.SetBool("idle", false);
@@ -58,7 +57,6 @@ public class playerController : MonoBehaviour
             animator.SetBool("down", false);
         }
         if(Input.GetAxis("Horizontal") > 0){
-            characterScale.x = 10;
             animator.SetBool("right", true);
             animator.SetBool("left", false);
             animator.SetBool("idle", false);
