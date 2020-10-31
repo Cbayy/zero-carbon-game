@@ -11,6 +11,8 @@ public class HarvestTile : MonoBehaviour
     public Tilemap tilemap;
     public Grid grid;
 
+    public GameObject seed;
+    private Transform player;
     
     GameObject CarbonScore;
 
@@ -21,7 +23,9 @@ public class HarvestTile : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();  
-        CarbonScore = GameObject.FindGameObjectWithTag("Score");    
+        CarbonScore = GameObject.FindGameObjectWithTag("Score");
+        player = GameObject.FindGameObjectWithTag("Player").transform;  
+        seed = GameObject.FindGameObjectWithTag("Seed");
     }
 
     //Can prob combine below code with that in waterTile
@@ -49,16 +53,19 @@ public class HarvestTile : MonoBehaviour
     }
 
     public void getTile(TileBase current, Vector3Int gridPosition){
-        string tileName = current.name;        
+        string tileName = current.name;
+        Vector2 playerPos = new Vector2(player.position.x, player.position.y - 1);        
         switch (tileName)
         {
             case "blueFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
                 CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 2;
+                
                 break;
             case "redFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
                 CarbonScore.GetComponent<Score>().score++;
+                Instantiate(seed, playerPos, Quaternion.identity);
                 break;
             default:
             break;
