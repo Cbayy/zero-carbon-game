@@ -10,6 +10,7 @@ TagManager:
   - Slot
   - EventSystem
   - Score
+  - Seed
   layers:
   - Default
   - TransparentFX
