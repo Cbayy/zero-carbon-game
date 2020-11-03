@@ -14,14 +14,15 @@ public class Events : MonoBehaviour
     TileBase[] allTiles;
 
     public TileBase blueFlower;
-
+    public TileBase redFlower;
+    GameObject CarbonScore;
 
     // Start is called before the first frame update
     void Start()
     {
         tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
-
+        CarbonScore = GameObject.FindGameObjectWithTag("Score");
         bounds = tilemap.cellBounds;
         allTiles = tilemap.GetTilesBlock(bounds);
     }
@@ -41,8 +42,16 @@ public class Events : MonoBehaviour
                     switch (tile.name)
                     {
                         case "wateredPlantedEcSeed":
-                            tilemap.SetTile(gridPosition, blueFlower);
+                            int a = Random.Range(0,11);
+                            if(a > 7){
+                                tilemap.SetTile(gridPosition, redFlower);
+                                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score -7;
+                            }else{
+                                tilemap.SetTile(gridPosition, blueFlower);
+                                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score -5;
+                            }
                         break;
+                        
                         default:
                         break;
                     }
@@ -52,4 +61,5 @@ public class Events : MonoBehaviour
             }
         }     
     }
+
 }

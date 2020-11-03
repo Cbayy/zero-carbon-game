@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - blueFlower: {fileID: 11400000, guid: 276b81810a17a794bb0d8c4f03c078d8, type: 2}
+  - redFlower: {fileID: 11400000, guid: 6edcaa1c25382fd4a9f808164d5b8037, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
