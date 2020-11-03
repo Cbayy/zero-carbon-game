@@ -54,17 +54,18 @@ public class HarvestTile : MonoBehaviour
 
     public void getTile(TileBase current, Vector3Int gridPosition){
         string tileName = current.name;
-        Vector2 playerPos = new Vector2(player.position.x, player.position.y - 1);        
+        Vector2 playerPos = new Vector2(player.position.x, player.position.y - 2);
+        seed = GameObject.FindGameObjectWithTag("Seed");        
         switch (tileName)
         {
             case "blueFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
-                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 2;
-                
+                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 5;
+                Instantiate(seed, playerPos, Quaternion.identity);
                 break;
             case "redFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
-                CarbonScore.GetComponent<Score>().score++;
+                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 7;
                 Instantiate(seed, playerPos, Quaternion.identity);
                 break;
             default:
