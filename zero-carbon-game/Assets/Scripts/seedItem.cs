@@ -13,7 +13,7 @@ public class seedItem : MonoBehaviour
 
     //private bool placing = false;
 
-    public TileBase plantedEcSeed;
+    public TileBase plantedSeed;
 
     public seedItem button;
 
@@ -60,20 +60,17 @@ public class seedItem : MonoBehaviour
     }        
 
     public void getTile(TileBase current, Vector3Int gridPosition){
-        
-        string tileName = current.name;
-        print("TTT: " + tileName);
-        
-        switch (tileName)
-        {
+        string tileName = current.name;        
+        switch (tileName){
             case "sand01":
-                tilemap.SetTile(gridPosition, plantedEcSeed);
+                tilemap.SetTile(gridPosition, plantedSeed);
                 Destroy(gameObject);
                 break;
             default:
             break;
         }
     }
+
 
 /*
 

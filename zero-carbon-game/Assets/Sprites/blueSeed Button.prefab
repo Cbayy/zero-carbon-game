@@ -144,5 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 0}
   grid: {fileID: 0}
-  plantedEcSeed: {fileID: 11400000, guid: 4a0d2d0af28357e40aa4e72b8cd16487, type: 2}
-  button: {fileID: 0}
+  plantedSeed: {fileID: 11400000, guid: 7655ebbb1de9e1d4481d14df94e68803, type: 2}
+  button: {fileID: 3924508289037886269}
