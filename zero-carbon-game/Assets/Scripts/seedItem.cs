@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class seedItem : MonoBehaviour
+public class SeedItem : MonoBehaviour
 {
     private Inventory inventory;
     public Tilemap tilemap;
@@ -15,7 +15,7 @@ public class seedItem : MonoBehaviour
 
     public TileBase plantedSeed;
 
-    public seedItem button;
+    public SeedItem button;
 
     //new private string name;
 

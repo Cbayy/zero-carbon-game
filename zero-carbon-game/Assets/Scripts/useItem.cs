@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class useItem : MonoBehaviour
+public class UseItem : MonoBehaviour
 {
 
     private Inventory inventory;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class slotItem : MonoBehaviour
+public class SlotItem : MonoBehaviour
 {
     private Inventory inventory;
     public int i;

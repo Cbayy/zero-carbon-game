@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class waterTile : MonoBehaviour
+public class WaterTile : MonoBehaviour
 {
 
     private Inventory inventory;
