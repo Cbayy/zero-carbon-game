@@ -12,11 +12,13 @@ public class HarvestTile : MonoBehaviour
     public Grid grid;
 
     public GameObject seed;
+    public GameObject blueSeed;
     private Transform player;
     
     GameObject CarbonScore;
 
     public TileBase plantedEcSeed;
+    public TileBase plantedBlueSeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class HarvestTile : MonoBehaviour
         CarbonScore = GameObject.FindGameObjectWithTag("Score");
         player = GameObject.FindGameObjectWithTag("Player").transform;  
         seed = GameObject.FindGameObjectWithTag("Seed");
+        blueSeed = GameObject.FindGameObjectWithTag("BlueSeed");
     }
 
     //Can prob combine below code with that in waterTile
@@ -54,18 +57,19 @@ public class HarvestTile : MonoBehaviour
 
     public void getTile(TileBase current, Vector3Int gridPosition){
         string tileName = current.name;
-        Vector2 playerPos = new Vector2(player.position.x, player.position.y - 2);
-        seed = GameObject.FindGameObjectWithTag("Seed");        
+        Vector2 playerPos = new Vector2(player.position.x, player.position.y - 2);        
         switch (tileName)
         {
             case "blueFlowerSand":
-                tilemap.SetTile(gridPosition, plantedEcSeed);
-                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 5;
-                Instantiate(seed, playerPos, Quaternion.identity);
+                tilemap.SetTile(gridPosition, plantedBlueSeed);
+                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 7;
+                blueSeed = GameObject.FindGameObjectWithTag("BlueSeed"); 
+                Instantiate(blueSeed, playerPos, Quaternion.identity);
                 break;
             case "redFlowerSand":
                 tilemap.SetTile(gridPosition, plantedEcSeed);
-                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 7;
+                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score + 5;
+                seed = GameObject.FindGameObjectWithTag("Seed"); 
                 Instantiate(seed, playerPos, Quaternion.identity);
                 break;
             default:

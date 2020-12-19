@@ -11,6 +11,7 @@ TagManager:
   - EventSystem
   - Score
   - Seed
+  - BlueSeed
   layers:
   - Default
   - TransparentFX
