@@ -13,6 +13,7 @@ public class WaterTile : MonoBehaviour
 
     public TileBase waterSand;
     public TileBase waterEcSeed;
+    public TileBase waterBlueSeed;
 
     void Start()
     {
@@ -58,6 +59,9 @@ public class WaterTile : MonoBehaviour
                 break;
             case "plantedEcSeed":
                 tilemap.SetTile(gridPosition, waterEcSeed);
+                break;
+            case "plantedBlueSeed":
+                tilemap.SetTile(gridPosition, waterBlueSeed);
                 break;
             default:
             break;

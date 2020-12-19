@@ -42,16 +42,13 @@ public class Events : MonoBehaviour
                     switch (tile.name)
                     {
                         case "wateredPlantedEcSeed":
-                            int a = Random.Range(0,11);
-                            if(a > 7){
                                 tilemap.SetTile(gridPosition, redFlower);
-                                CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score -7;
-                            }else{
-                                tilemap.SetTile(gridPosition, blueFlower);
                                 CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score -5;
-                            }
                         break;
-                        
+                        case "wateredPlatedBlueSeed":
+                            tilemap.SetTile(gridPosition, blueFlower);
+                            CarbonScore.GetComponent<Score>().score = CarbonScore.GetComponent<Score>().score -7;
+                        break;
                         default:
                         break;
                     }

@@ -1181,6 +1181,7 @@ MonoBehaviour:
   grid: {fileID: 0}
   waterSand: {fileID: 11400000, guid: ccb78839b545c924e8473668da36fb4c, type: 2}
   waterEcSeed: {fileID: 11400000, guid: cd9ed13144c370f4fbb1a9febd926d07, type: 2}
+  waterBlueSeed: {fileID: 11400000, guid: 006da503f3711d44291943aec52f7f86, type: 2}
 --- !u!1 &529920962
 GameObject:
   m_ObjectHideFlags: 0

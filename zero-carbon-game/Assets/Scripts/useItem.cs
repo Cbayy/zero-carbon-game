@@ -44,8 +44,12 @@ public class UseItem : MonoBehaviour
                 placing = false;
                 if(this.name == "ecseed"){
                     tilemap.SetTile(position, grassSprite);
+                    print("EE");
+                if(this.name == "blueseed"){
+                    print("YYY");
+                }
                 }else{
-                    print("NOO");
+                    
                 }
                 //this.GameObject.destroy;
             }
