@@ -12,6 +12,7 @@ TagManager:
   - Score
   - Seed
   - BlueSeed
+  - Gate
   layers:
   - Default
   - TransparentFX

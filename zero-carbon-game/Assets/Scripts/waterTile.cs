@@ -22,11 +22,9 @@ public class WaterTile : MonoBehaviour
         grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
     }
 
-
     public void Use(){
         StartCoroutine("WaitForAnswer");
     }
-
 
     public IEnumerator WaitForAnswer()
     {
@@ -48,10 +46,7 @@ public class WaterTile : MonoBehaviour
     }    
 
     public void getTile(TileBase current, Vector3Int gridPosition){
-        
-        string tileName = current.name;
-        print("TTT: " + tileName);
-        
+        string tileName = current.name;        
         switch (tileName)
         {
             case "sand01":
@@ -67,5 +62,4 @@ public class WaterTile : MonoBehaviour
             break;
         }
     }
-
 }
