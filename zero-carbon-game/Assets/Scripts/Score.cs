@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,8 +22,5 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreTxt.text = "Carbon levels: " + score.ToString();
-        if(score <= 90){
-            gate.GetComponent("Tilemap Renderer").enabled = false;
-        }
     }
 }
